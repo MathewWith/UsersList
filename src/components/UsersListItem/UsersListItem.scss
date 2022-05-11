@@ -1,0 +1,20 @@
+.users-item{
+    padding: 15px 15px;
+    margin: 15px 15px;
+    width: 25%;
+    background-color: rgb(249, 248, 248);
+    border-radius: 10px;
+    .user-info{
+        display: flex;
+        justify-content: space-between;
+        &__left-side{
+            padding: 10px 10px;
+        }
+        &__right-side{
+            padding: 10px 10px;
+        }
+    }
+    .buttons{
+        padding: 10px 15px;
+    }
+}
