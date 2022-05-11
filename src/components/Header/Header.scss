@@ -1,0 +1,25 @@
+.header {
+    background-color: rgba(59, 26, 92, 0.922);
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__label{
+        font-family: 'Rubik One', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        background:  linear-gradient(90deg, rgba(229,255,4,1) 0%, rgba(205,241,2,1) 21%, rgba(0,57,255,1) 79%, rgba(0,57,255,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: table;
+        margin: 0;
+    }
+    &__link{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        padding-top: 5px;
+        cursor: pointer;
+        
+    }
+}
