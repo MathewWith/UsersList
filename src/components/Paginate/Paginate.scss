@@ -1,0 +1,14 @@
+.pages{
+    margin: 20px 0;
+    margin-left: 70%;
+    &__page{
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    &__current-page{
+        background-color: #0064EB;
+        border-radius: 3px;
+        color: white;
+        padding: 2px 6px;
+    }
+}

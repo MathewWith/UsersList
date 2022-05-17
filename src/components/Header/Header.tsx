@@ -4,7 +4,7 @@ export const Header = () => {
     return (
         <div className="header">
             <Link className="header__label" to={'/'}>ASFERRO</Link>
-            <Link className="header__link" to={"/add-update-user"}>
+            <Link className="header__link" to={"/users/create"}>
                 Create a new user
             </Link>
         </div>

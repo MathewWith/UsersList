@@ -1,5 +1,12 @@
 .users-list{
-    display: flex;
+    &__content{
+        display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    }
+    &__paginate{
+        display: flex;
+        justify-content: right;
+        padding-right: 10%;
+    }
 }

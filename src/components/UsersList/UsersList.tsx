@@ -1,26 +1,28 @@
-import { useEffect } from "react"
-import { useActions } from "src/hooks/useActions"
+import { useState } from "react"
 import { useTypedSelector } from "src/hooks/useTypedSelector"
+import { PageState } from "src/types/PaginateTypes"
+import { UserType } from "src/types/UsersTypes"
+import Paginate from "../Paginate"
 import UsersListItem from "../UsersListItem"
 
-interface StateTypes {
-    users: any
-}
-
 export const UsersList = () => {
-    const data= useTypedSelector((state: StateTypes) => state.users)
-    const {getUsers} = useActions()
-    useEffect(() => {
-        const getUsersData = async () => {
-            await getUsers()
-        }
+    const [currentPage, setCurrentPage] = useState<number>(1);
 
-        getUsersData()
-    }, [])
+    const pageData: PageState = useTypedSelector((state) => state.paginate);
+    const usersData = useTypedSelector((state) => state.users);
+    
+    const lastPage = currentPage * pageData.perPage;
+    const firstPage = lastPage - pageData.perPage;
+    const currentCount = usersData.users.slice(firstPage, lastPage);
     
     return (
         <div className="users-list">
-            {data.users.map((user: any) => <UsersListItem key={user.id} user={user}/>)}
+            <div className="users-list__content">
+                {currentCount.map((user: UserType) => <UsersListItem key={user.id} user={user}/>)}
+            </div>
+            <div className="users-list__paginate">
+                <Paginate setCurrentPage={setCurrentPage} currentPage={currentPage}/>
+            </div>
         </div>
     )
-}
+} 

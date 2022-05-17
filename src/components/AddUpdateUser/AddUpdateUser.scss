@@ -1,0 +1,25 @@
+.form{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    .update-form{
+        display: flex;
+        flex-direction: column;
+        input{
+            margin-bottom: 10px;
+            padding: 10px 10px;
+            font-size: 20px;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+        }
+    }
+    button{
+        padding: 7px;
+        font-size: 17px;
+        border-radius: 5px;
+        border: 1px solid rgba(119, 51, 187, 0.922);
+        background-color: rgba(119, 51, 187, 0.922);
+        color: white;
+    }
+}
